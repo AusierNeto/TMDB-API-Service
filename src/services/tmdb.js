@@ -21,6 +21,22 @@ export default class tmdbService {
     
     return response.json();
   }
+
+  async getPlayingMovies() {
+    return this.request('/movie/now_playing');
+  }
+
+  async getPopularMovies() {
+    return this.request('/movie/popular');
+  }
+  
+  async getTopRatedMovies() {
+    return this.request('/movie/top_rated');
+  }
+  
+  async getUpcomingMovies() {
+    return this.request('/movie/upcoming');
+  }
   
 }
 
