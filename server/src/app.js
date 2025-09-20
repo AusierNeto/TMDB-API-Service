@@ -36,7 +36,7 @@ app.get('/movies/upcoming', (req, res) => {
   }
 })
 
-app.get('/movies/top_rated', (req, res) => {
+app.get('/movies/top', (req, res) => {
   const tmdbServiceInstance = new tmdbService();
   try {
     tmdbServiceInstance.getTopRatedMovies().then(e => res.json(e));
